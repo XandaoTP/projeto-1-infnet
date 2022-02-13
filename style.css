@@ -12,6 +12,7 @@ body {
     color: #424242;
     font-size: 16px;
     padding-top: 70px;
+    padding-bottom: 82px;
 }
 .topbar {
     display: flex;
@@ -43,7 +44,7 @@ body {
     justify-content: space-around;
     z-index: 12;
     opacity: 90%;
-    left: -39px;
+    left: -29px;
     top: 53px;
 }
 .img1 {
@@ -59,15 +60,15 @@ body {
 }
 footer {
     background-color: black;
-    position: absolute;
     bottom: 0;
     color: #FFF;
     width: 100%;
-    height: 100px;    
+    height: 80px;    
     text-align: center;
     line-height: 100px;
     display: flex;
     justify-content: space-around;
+    position: fixed;
 }
 .lista {
     text-decoration: none;
@@ -112,4 +113,34 @@ footer {
     .corpo {
         align-items: center;
     }
+}
+.deals {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.deals1 {
+    flex-direction: column;
+}
+.banner {
+    border: solid 2px black;
+    align-items: center;
+}
+.list {
+    list-style-type: none;
+}
+.btn1 {
+    width: 90px;
+    height: 40px;
+    border: solid 1px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(182, 226, 228);
+    width: 100%;
+}
+.imgtext {
+    display: relative;
+}
+.textdeals {
+    display: absolute;
 }

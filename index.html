@@ -1,52 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Xandao Informatica</title>
-    <script src="https://kit.fontawesome.com/05fbb26e2d.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Xandao Informatica</title>
+        <script src="https://kit.fontawesome.com/05fbb26e2d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
         <div class="topbar">
             <div class="acess">
                 <img src="images/Sem título.png" id="botao">
-                <ul id="info" class="infos">
+                <ul id="info" class="infos" >
                     <li><a href="cpu.html" class="lista">PROCESSADORES</a></li>
                     <li><a href="gpu.html" class="lista">PLACAS DE VIDEO</a></li>
+                    <li><a href="maintenance.html" class="lista">ORÇAMENTO REPARO</a></li>
                 </ul> 
             </div>
             <img src="images/graphic_card.png"/>
             <button id="buttoncart">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span class="buttonunits">5</span>
-            </button>
+                 </button>
         </div>                           
-        <div>
-            <img src="images/melhor-pc-gamer.webp" class="img1">
-        </div>
-    </div>
-    <div class="maisvendidos">
-        <div>asdasdasd</div>
-        <div>asdasd</div>
-        <div>asasd</div>
-        <div>adsasd</div>
-    </div>    
-    <footer class="rodape">
-        <div>contato</div>
-        <div>Xandao informatica ltda</div>
-        <div>
-           <div> sobre nós</div>
-        </div>
-    </footer>
-    <script>
-        document.getElementById("botao").onclick = function() { abrir ()}
+            <div class="imgtext">
+                <img src="images/melhor-pc-gamer.webp" class="img1" >
+            </div>
+            <h2 class="textdeals">Promoções:</h2>
+            <div class="deals">    
+                <ul class="list">     
+                    <div class="banner">
+                        <img src="images/3080branca.jpg" width="300px"/>
+                        <li class="deal1">Asus Strix 3080Ti White Version </li>
+                        <li>R$ 9.999,99</li>
+                        <button class="btn1">Adicionar ao carrinho</button>
+                    </div>
+                    <br></br>
+                    <div class="banner">
+                        <img src="images/5600x.jfif" width="300px"/>
+                        <li>AMD RYZEN 5 5600X</li>
+                        <li>R$ 1.699,90</li>
+                        <button class="btn1">Adicionar ao carrinho</button>
+                    </div>  
+                    <br></br>
+                    <div class="banner">
+                    <img src="images/3060gainward.webp" width="300px" />
+                    <li>Gainward 3060 pegasus</li>
+                    <li style="color:blue">R$ 3.600,00</li>
+                    <button class="btn1" >Adicionar ao carrinho</button>
+                </div>        
+            </ul>   
+        </div>    
+        <footer class="rodape">
+            <div>contato</div>
+            <div>Xandao informatica ltda</div>
+            <div>
+            <div> sobre nós</div>
+            </div>
+        </footer>
+        <script>
+            document.getElementById("botao").onclick = function() { abrir ()}
 
-        function abrir() {
-            document.getElementById("info").classList.toggle("show");
-        }
-    </script>
-</body>
-</html>
+            function abrir() {
+                document.getElementById("info").classList.toggle("show");
+            }
+        </script>
+    </body>
+    </html>
