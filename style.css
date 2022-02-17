@@ -24,12 +24,8 @@ body {
     position: fixed;
     top: 0;
 }
-.lugar {
-    position: relative;
-}
 .infos {
     display: none;
-    background-color: grey;
 }
 .show {
     color: white;
@@ -38,24 +34,23 @@ body {
     width: 140px;
     position: absolute;
     list-style-type: none;
-    height: 10px;
     justify-content: space-between;
-    z-index: 12;
-    opacity: 90%;
-    left: -23px;
+    left: 0;
     top: 53px;
 }
+.lista {
+    text-decoration: none;
+    color: #FFF;
+    background-color: rgb(33, 7, 58);
+    width: 100%;
+} 
 .img1 {
     padding-top: 5px;
     width: 100%;
     height: 150px;
     border-bottom: solid 2px;
 }
-.sec1 {
-    background-color: dimgrey;
-    width: 100%;
-    height: 100%;
-}
+
 footer {
     background-color: black;
     color: #FFF;
@@ -64,12 +59,7 @@ footer {
     align-items: center;
     display: flex;
     justify-content: space-around;
-    bottom: -20px;
-    position:relative;
-}
-.lista {
-    text-decoration: none;
-    color: #FFF;
+    bottom: 20px;
 }
 .maisvendidos {
     display: flex;
@@ -99,37 +89,22 @@ footer {
 }
 .acess {
     position: relative;
+    height: 100%;
 }
 .deals {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
-@media screen and (min-width: 600px) {
-    .img1 {
-        width: 950px ;
-        height: 400px ;
-        display: block;
-        margin: auto;
-    }
-    .corpo {
-        align-items: center;
-    }
-    .list {
-        display: grid;
-        grid-template-columns: 1fr  1fr;
-        grid-gap: 20px;
-    }
-}
+
 .deals1 {
     flex-direction: column;
 }
 .banner {
     border: solid 2px black;
     align-items: center;
-}
-.list {
-    list-style-type: none;
+    margin: 20px;
 }
 .btn1 {
     width: 90px;
@@ -138,7 +113,8 @@ footer {
     cursor: pointer;
     border-top: solid 2px;
     background-color: rgb(76, 6, 155);
-    width: 250px;
+    width: 270px;
+    color: white;
 }
 .imgtext {
     display: relative;
