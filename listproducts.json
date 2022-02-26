@@ -1,3 +1,190 @@
 {
-    
+   "groups": [
+       {
+       "id": 1,
+       "name": "deals",
+       "products": [
+            {
+                "id": 2,
+                "nome": "Asus Strix 3080Ti White",
+                "image": "images/3080branca.jpg",
+                "description": "12GB vram",
+                "price": 9999.99
+            },
+            {
+                "id": 3,
+                "nome": "AMD Ryzen 5 5600x",
+                "image": "images/5600x.jpg",
+                "description": "6/12",
+                "price": 1699.90
+            },
+            {
+                "id": 4,
+                "nome": "Gainward 3060 Ghost",
+                "image": "images/3060gainward.jpg",
+                "description": "12GB vram",
+                "price": 3600.00
+            },
+            {
+                "id": 5,
+                "nome": "Intel Core i9 10850k",
+                "image": "images/i9-10850k.jpg",
+                "description": "10/20",
+                "price": 9999.99
+            },
+            {
+                "id": 6,
+                "nome": "Asus Rog LC RX6900xt",
+                "image": "images/placa-de-video-asus-rog-strix-lc-rx6900xt.jpg",
+                "description": "16GB vram",
+                "price": 10000.00
+            },
+            {
+                "id": 7,
+                "nome": "intel core i7 11700k",
+                "image": "images/processador-intel-core-i7-11700k-11.jpg",
+                "description": "8/16",
+                "price": 2789.00
+            },
+            {
+                "id": 8,
+                "nome": "Asus NVIDIA GeForce GTX 1050 Ti",
+                "image": "images/1050ti.jpg",
+                "description": "4GB",
+                "price": 1349.89
+            },
+            {
+                "id": 9,
+                "nome": "Processador AMD A6-748",
+                "image": "images/AMD-A6-7480.jpg",
+                "description": "Dual core",
+                "price": 303.97
+            }
+        ]
+       },  
+       {
+        "id": 10,
+        "name": "Processadores",
+        "products": [
+             {
+                 "id": 11,
+                 "nome": "Asus Strix 3080Ti White",
+                 "image": "images/3080branca.jpg",
+                 "description": "12GB vram",
+                 "price": 9999.99
+             },
+             {
+                 "id": 12,
+                 "nome": "AMD Ryzen 5 5600x",
+                 "image": "images/5600x.jpg",
+                 "description": "6/12",
+                 "price": 1699.90
+             },
+             {
+                 "id": 13,
+                 "nome": "Gainward 3060 Ghost",
+                 "image": "images/3060gainward.jpg",
+                 "description": "12GB vram",
+                 "price": 3600.00
+             },
+             {
+                 "id": 14,
+                 "nome": "Intel Core i9 10850k",
+                 "image": "images/i9-10850k.jpg",
+                 "description": "10/20",
+                 "price": 9999.99
+             },
+             {
+                 "id": 15,
+                 "nome": "Asus Rog LC RX6900xt",
+                 "image": "images/placa-de-video-asus-rog-strix-lc-rx6900xt.jpg",
+                 "description": "16GB vram",
+                 "price": 10000.00
+             },
+             {
+                 "id": 16,
+                 "nome": "intel core i7 11700k",
+                 "image": "images/processador-intel-core-i7-11700k-11.jpg",
+                 "description": "8/16",
+                 "price": 2789.00
+             },
+             {
+                 "id": 17,
+                 "nome": "Asus NVIDIA GeForce GTX 1050 Ti",
+                 "image": "images/1050ti.jpg",
+                 "description": "4GB",
+                 "price": 1349.89
+             },
+             {
+                 "id": 18,
+                 "nome": "Processador AMD A6-748",
+                 "image": "images/AMD-A6-7480.jpg",
+                 "description": "Dual core",
+                 "price": 303.97
+             }
+         ]
+        },
+        {
+            "id": 19,
+            "name": "Placas de Vídeo",
+            "products": [
+                 {
+                     "id": 20,
+                     "nome": "Asus Strix 3080Ti White",
+                     "image": "images/3080branca.jpg",
+                     "description": "12GB vram",
+                     "price": 9999.99
+                 },
+                 {
+                     "id": 21,
+                     "nome": "AMD Ryzen 5 5600x",
+                     "image": "images/5600x.jpg",
+                     "description": "6/12",
+                     "price": 1699.90
+                 },
+                 {
+                     "id": 22,
+                     "nome": "Gainward 3060 Ghost",
+                     "image": "images/3060gainward.jpg",
+                     "description": "12GB vram",
+                     "price": 3600.00
+                 },
+                 {
+                     "id": 23,
+                     "nome": "Intel Core i9 10850k",
+                     "image": "images/i9-10850k.jpg",
+                     "description": "10/20",
+                     "price": 9999.99
+                 },
+                 {
+                     "id": 24,
+                     "nome": "Asus Rog LC RX6900xt",
+                     "image": "images/placa-de-video-asus-rog-strix-lc-rx6900xt.jpg",
+                     "description": "16GB vram",
+                     "price": 10000.00
+                 },
+                 {
+                     "id": 25,
+                     "nome": "intel core i7 11700k",
+                     "image": "images/processador-intel-core-i7-11700k-11.jpg",
+                     "description": "8/16",
+                     "price": 2789.00
+                 },
+                 {
+                     "id": 26,
+                     "nome": "Asus NVIDIA GeForce GTX 1050 Ti",
+                     "image": "images/1050ti.jpg",
+                     "description": "4GB",
+                     "price": 1349.89
+                 },
+                 {
+                     "id": 27,
+                     "nome": "Processador AMD A6-748",
+                     "image": "images/AMD-A6-7480.jpg",
+                     "description": "Dual core",
+                     "price": 303.97
+                 }
+             ]
+            }
+    ] 
 }
