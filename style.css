@@ -7,10 +7,21 @@
 }
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgb(219, 211, 211);
+    background-color: rgb(129, 129, 129);
     color: #424242;
     font-size: 16px;
     padding-top: 70px;
+}
+h1 {
+    text-align: center;
+    margin-top: 25px;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    border-bottom: solid 2px  #FFF;
+}
+h2 {
+    margin: 15px 0px;
+    font-weight: 600;
 }
 :root {
     --colorbtn: rgb(33, 7, 58);
@@ -42,7 +53,7 @@ body {
 }
 .buttonunits {
     border: 1px solid white;
-    display: flex;
+    display: none;
     position: absolute;
     align-items: center;
     justify-content: center;
@@ -54,17 +65,20 @@ body {
     font-size: 12px;
     background-color: rgba( 73, 19, 19) ;
 }
+.buttonunitsshow {
+    display: flex;
+  }
 .img1 {
     padding-top: 5px;
     width: 100%;
     height: 150px;
     border-radius: 0px 0px 100px 100px;
-    box-shadow: 0px 20px 15px  var(--coloritens);
+    box-shadow: 0px 20px 15px  var(--colorbtn);
 }
-.deals {
+.gridproducts {
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     margin-left: auto;
     margin-right: auto;
     gap: 12px ;
@@ -72,11 +86,12 @@ body {
     }
 .banner {
     border-radius: 5px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    box-shadow: 15px 15px 30px var(--colorbtn);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    border: solid 2px;   
+    border: solid 2px;  
+    background-color: white;
 }
 .banner img {
     width: 100%;
@@ -84,16 +99,16 @@ body {
     display: block;
 }
 .btnaddcart {
-    width: 230px;
+    width: 100%;
     height: 40px;
     border: solid 1px;
     cursor: pointer;
     border-top: solid 2px;
-    background-color: rgb(76, 6, 155);
+    background-color: var(--colorbtnset);
     color: white;
     margin: 0 auto;
     border-radius: 5px;
-    box-shadow: 0px 5px 5px var(--coloritens);
+    box-shadow: 0px 3px 5px rgb(152, 116, 170);
     transition: all 0.3s linear;
 }
 .btnaddcart:hover{
@@ -101,12 +116,12 @@ body {
 }
 .productcontent {
     padding: 10px;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 .productcontent p {
     margin-bottom: 8px;
+    text-align: center;
 }
 .productcontent h3 {
     text-align: center;
@@ -117,9 +132,23 @@ body {
     font-weight: 600;
     text-align: center;
 }
-.textdeals {
-text-align: center;
-padding: 25px 0;;
+.whatsapp{
+	position:fixed; 
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+    z-index: 5px;
+    vertical-align: middle;
+}
+.whatscenter {
+    margin-top: 15px;
 }
 footer {
     background-color: black;
@@ -164,17 +193,29 @@ footer {
     font-size: 100px;
     opacity: 30%;
 }
+.errorpage {
+    text-align: center;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    padding: 25px 0px;
+    font-size: 25px;
+    color: white;
+    background-color: var(--colorbtn);
+}
 @media (min-width: 576px) {
     .spacing {
         width: 540px;
         margin-left: auto;
         margin-right: auto;
     }
-    .deals {
+    .gridproducts {
         margin-left: auto;
         margin-right: auto;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         gap: 12PX;      
     }
     .img1 {
@@ -188,9 +229,9 @@ footer {
     .spacing {
         width: 720px;
     }
-    .deals {
+    .gridproducts {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         flex-grow: 1;
              }
     .img1 {
@@ -207,8 +248,8 @@ footer {
     .spacing {
         width: 992px;
     }
-    .deals {
-        grid-template-columns: 1fr 1fr 1fr;
+    .gridproducts {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
                
     }
     .img1 {
@@ -219,11 +260,7 @@ footer {
 }
 @media (min-width: 1200px) {
     .spacing {
-        width: 1140px;
-    }
-    .deals {
-
-        grid-template-columns: 1fr 1fr 1fr 1fr;       
+        width: 1140px;      
     }
     .img1 {
         height: 250px;
@@ -234,8 +271,8 @@ footer {
     .spacing {
         width: 1320px;
     }
-    .deals {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    .gridproducts {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
     .img1 {
         height: 250px;
