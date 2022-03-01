@@ -7,8 +7,8 @@
 }
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: rgb(129, 129, 129);
-    color: #424242;
+    background-color: rgb(255, 255, 255);
+    color: #030303;
     font-size: 16px;
     padding-top: 70px;
 }
@@ -16,8 +16,8 @@ h1 {
     text-align: center;
     margin-top: 25px;
     font-weight: bolder;
-    color: rgb(255, 255, 255);
-    border-bottom: solid 2px  #FFF;
+    color: rgb(0, 0, 0);
+    border-bottom: solid 2px  rgb(7, 7, 7);
 }
 h2 {
     margin: 15px 0px;
