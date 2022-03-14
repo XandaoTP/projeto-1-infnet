@@ -15,7 +15,7 @@ const loadProducts= () => {
     fetch('/listproducts.json')
         .then(data => data.json())
         .then(list => {
-            // groupsproducts.innerHTML = ''
+            groupsproducts.innerHTML = ''
             list.groups.forEach((group) => {
             const groupSectionEl = getSectionElement(group)
             groupsproducts.appendChild(groupSectionEl)
@@ -55,7 +55,7 @@ const loadProducts= () => {
       }
 loadProducts()
 
-const productsCart = []
+let productsCart = []
 const addToCart = newProduct => {
   const productIndex = productsCart.findIndex(
     item => item.id === newProduct.id
@@ -70,21 +70,75 @@ const addToCart = newProduct => {
   }
   handleCartUpdate()
 }
+const deleteOfCart = id => {
+   productsCart = productsCart.filter((product) =>{
+    if (product.id === id) {
+      return false
+    }
+      return true
+  })
+  handleCartUpdate()
+  if (productsCart.length === 0) {
+    closeWindowCart()
+  }
+}
+const updateItemQty = (id, newQty) => {
+  const productListIndex = productsCart.findIndex((product) => {
+    if(product.id === id) {
+      return true
+    }
+      return false
+  })
+  productsCart[productListIndex].qty = parseInt(newQty)
+  handleCartUpdate()
+}
 const handleCartUpdate = () => {
   const noProdcutsEL = document.querySelector('#noproducts')
   const cartWithProductsEl = document.querySelector('#cartwithproducts')
+  const listItemEL = cartWithProductsEl.querySelector('ul')
+  const cartBadgeEl = document.querySelector('.buttonunits')
   if (productsCart.length > 0) {
-    const cartBadgeEl = document.querySelector('.buttonunits')
     cartBadgeEl.classList.add('buttonunitsshow')
     let total = 0
+    let finalPrice = 0
     productsCart.forEach(product => {
       total = total + product.qty
+      finalPrice = finalPrice + product.price * product.qty
     })
     cartBadgeEl.textContent = total
+    const finalPriceEl = document.querySelector('.totalprice p:last-child')
+    finalPriceEl.textContent = finalPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
     const cartWithProductsEl = document.querySelector('#cartwithproducts')
     cartWithProductsEl.classList.add('cartwithproductsshow')
     noProdcutsEL.classList.remove('noproductsshow')
+    listItemEL.innerHTML = ''
+    productsCart.forEach((product) => {
+      const showItemEl = document.createElement('li')
+      showItemEl.classList.add('listcartproducts')
+      showItemEl.innerHTML = `<img src="${product.image}" alt="${product.name}" height="85">
+      <div>
+          <p class="nameproductcart">${product.name}</p>
+          <p class="priceincart">R$ ${product.price.toLocaleString('pt-br', { minimumFractionDigits: 2 })}</p>
+       </div>   
+      <input class="inputcart" type="number" value=${product.qty} />
+      <button id="deleteproduct">
+          <i class="fa-solid fa-trash-can"></i>
+      </button>`
+      const buttonDeleteEL = showItemEl.querySelector('button')
+      buttonDeleteEL.addEventListener('click', (event) => {
+        deleteOfCart(product.id)
+      })
+      const inputQtyEl = showItemEl.querySelector('input')
+      inputQtyEl.addEventListener('keyup', (event) => {
+        updateItemQty(product.id, event.target.value)
+      })
+      inputQtyEl.addEventListener('change', (event) => {
+        updateItemQty(product.id, event.target.value)
+      })
+      listItemEL.appendChild(showItemEl)
+    })
   } else {
+    cartBadgeEl.classList.remove('buttonunitsshow')
     cartWithProductsEl.classList.remove('cartwithproductsshow')
     noProdcutsEL.classList.add('noproductsshow')
     

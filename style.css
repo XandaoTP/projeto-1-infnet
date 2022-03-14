@@ -189,8 +189,8 @@ h2 {
     align-self: center;
 }
 .nameproductcart {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 400;
 }
 footer {
     background-color: black;
@@ -240,6 +240,7 @@ footer {
 }
 #cartwithproducts {
     display: none;
+    overflow: auto;
 }
 #cartwithproducts.cartwithproductsshow {
     display: block;
@@ -285,6 +286,7 @@ footer {
 }
 .listcartproducts div {
     align-self: center;
+    flex-grow: 1;   
 }
 @media (min-width: 576px) {
     .spacing {
@@ -370,4 +372,5 @@ footer {
     width: 50px;
     text-align: center;
     align-self: center;
+    justify-items: end;
   }
