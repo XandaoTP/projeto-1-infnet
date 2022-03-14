@@ -23,10 +23,16 @@ h2 {
     margin: 15px 0px;
     font-weight: 600;
 }
+.title {
+    font-size: 22px;
+    font-weight: 600;
+    color:#fff;
+
+}
 :root {
     --colorbtn: rgb(33, 7, 58);
     --colorbtnset: rgb(60, 11, 109);
-    --pricecolor: rgb(97, 41, 230);
+    --pricecolor: rgb(76, 0, 253);
 }
 .topbar {
     background-color: var(--colorbtn);
@@ -79,11 +85,14 @@ h2 {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 1fr;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     gap: 12px ;
     margin-bottom: 12px;
-    }
+    grid-auto-rows: 2fr;
+    --skew: 15deg;    
+}
+
 .banner {
     border-radius: 5px;
     box-shadow: 15px 15px 30px var(--colorbtn);
@@ -111,17 +120,38 @@ h2 {
     box-shadow: 0px 3px 5px rgb(152, 116, 170);
     transition: all 0.3s linear;
 }
+.finishsale {
+    width: 100%;
+    height: 40px;
+    border: solid 1px;
+    cursor: pointer;
+    border-top: solid 2px;
+    background-color: #fff;
+    color: var(--colorbtn);
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px rgb(114, 111, 116);
+    transition: all 0.3s linear;
+}
 .btnaddcart:hover{
-    background-color: var(--colorbtnset);
+    background-color: rgb(16, 0, 43);
+}
+.finishsale:hover{
+    background-color: rgb(177, 176, 179);
 }
 .productcontent {
     padding: 10px;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 .productcontent p {
     margin-bottom: 8px;
     text-align: center;
+}
+.productcontent button {
+    margin: auto;
+    display: block;
 }
 .productcontent h3 {
     text-align: center;
@@ -150,6 +180,18 @@ h2 {
 .whatscenter {
     margin-top: 15px;
 }
+#deleteproduct {
+    background-color: transparent;
+    font-size: 30px;
+    color: aliceblue;
+    cursor: pointer;
+    margin-bottom: -3px;
+    align-self: center;
+}
+.nameproductcart {
+    font-size: 18px;
+    font-weight: 600;
+}
 footer {
     background-color: black;
     color: #FFF;
@@ -163,7 +205,7 @@ footer {
 .spacing {
     padding: 0px 12px;
 }
-.cartwindow{
+.cartwindow {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -183,7 +225,7 @@ footer {
     align-self: flex-end;
 }
 #noproducts {
-    display: flex;
+    display: none;
     flex-grow: 1;
     justify-content: center;
     flex-direction: column;
@@ -192,6 +234,31 @@ footer {
 #noproducts .fa-desktop {
     font-size: 100px;
     opacity: 30%;
+}
+#noproducts.noproductsshow {
+    display: flex;
+}
+#cartwithproducts {
+    display: none;
+}
+#cartwithproducts.cartwithproductsshow {
+    display: block;
+}
+#cartwithproducts ul {
+    list-style: none;
+    padding: 0 12px;
+}
+.listcartproducts {
+    display: flex;
+    align-items: end;
+    padding-top: 15px;
+    border-bottom: 1px solid #fff;
+    justify-content: space-between;
+}
+.listcartproducts  img {
+    border-radius: 5px;
+    border: solid rgb(0, 0, 0);
+    object-fit: cover;   
 }
 .errorpage {
     text-align: center;
@@ -204,6 +271,20 @@ footer {
     font-size: 25px;
     color: white;
     background-color: var(--colorbtn);
+}
+.priceincart {
+    font-weight: 600;
+    font-size: 18px;
+    color:rgb(76, 0, 253)
+}
+.totalprice {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 12px;
+
+}
+.listcartproducts div {
+    align-self: center;
 }
 @media (min-width: 576px) {
     .spacing {
@@ -279,3 +360,14 @@ footer {
         width: 1320px;     
     }
 }
+.inputcart {
+    border: 1px solid #CED4DA;
+    border-radius: 4px;
+    height: 30px;
+    font-family: inherit;
+    padding: 9px;
+    font-size: 16px;
+    width: 50px;
+    text-align: center;
+    align-self: center;
+  }

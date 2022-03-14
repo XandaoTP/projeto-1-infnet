@@ -54,6 +54,7 @@ const loadProducts= () => {
         return sectionEl
       }
 loadProducts()
+
 const productsCart = []
 const addToCart = newProduct => {
   const productIndex = productsCart.findIndex(
@@ -70,6 +71,8 @@ const addToCart = newProduct => {
   handleCartUpdate()
 }
 const handleCartUpdate = () => {
+  const noProdcutsEL = document.querySelector('#noproducts')
+  const cartWithProductsEl = document.querySelector('#cartwithproducts')
   if (productsCart.length > 0) {
     const cartBadgeEl = document.querySelector('.buttonunits')
     cartBadgeEl.classList.add('buttonunitsshow')
@@ -78,5 +81,14 @@ const handleCartUpdate = () => {
       total = total + product.qty
     })
     cartBadgeEl.textContent = total
+    const cartWithProductsEl = document.querySelector('#cartwithproducts')
+    cartWithProductsEl.classList.add('cartwithproductsshow')
+    noProdcutsEL.classList.remove('noproductsshow')
+  } else {
+    cartWithProductsEl.classList.remove('cartwithproductsshow')
+    noProdcutsEL.classList.add('noproductsshow')
+    
+  
   }
 }
+handleCartUpdate()
