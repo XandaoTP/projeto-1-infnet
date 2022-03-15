@@ -1,5 +1,6 @@
 const CartwindowEl = document.querySelector('.cartwindow')
-function openWindowCart () {
+function openWindowCart (event) {
+  event.stopPropagation()
     CartwindowEl.classList.add("cartwindowopen")
 }
 function closeWindowCart () {
@@ -9,6 +10,10 @@ const btnCartEl = document.getElementById('buttoncart')
     btnCartEl.addEventListener('click', openWindowCart)
 const closeCartEl = document.getElementById('btnclosecart')
     closeCartEl.addEventListener('click', closeWindowCart )
+    document.addEventListener('click', closeWindowCart)
+    CartwindowEl.addEventListener('click', (event) => {
+      event.stopPropagation()
+    })
     
 const loadProducts= () => {
     const groupsproducts = document.querySelector('#prodcontents')
