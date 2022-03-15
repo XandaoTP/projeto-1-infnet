@@ -56,6 +56,10 @@ const loadProducts= () => {
 loadProducts()
 
 let productsCart = []
+const SavedProductsOrder = localStorage.getItem('productsorder')
+if (SavedProductsOrder) {
+productsCart = JSON.parse(SavedProductsOrder)
+}
 const addToCart = newProduct => {
   const productIndex = productsCart.findIndex(
     item => item.id === newProduct.id
@@ -101,6 +105,8 @@ const updateItemQty = (id, newQty) => {
   } 
 }
 const handleCartUpdate = (renderItens = true) => {
+  const productsCartString = JSON.stringify(productsCart)
+  localStorage.setItem('productsorder', productsCartString)
   const noProdcutsEL = document.querySelector('#noproducts')
   const cartWithProductsEl = document.querySelector('#cartwithproducts')
   const listItemEL = cartWithProductsEl.querySelector('ul')
@@ -158,4 +164,5 @@ const handleCartUpdate = (renderItens = true) => {
     noProdcutsEL.classList.add('noproductsshow')
   }
 }
+
 handleCartUpdate()
