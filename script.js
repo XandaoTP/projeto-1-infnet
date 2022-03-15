@@ -164,5 +164,10 @@ const handleCartUpdate = (renderItens = true) => {
     noProdcutsEL.classList.add('noproductsshow')
   }
 }
-
 handleCartUpdate()
+window.addEventListener('storage', (attpage) =>{
+  if (attpage.key === 'productsorder') {
+    productsCart = JSON.parse(attpage.newValue)
+    handleCartUpdate()
+  }
+})
