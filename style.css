@@ -259,7 +259,6 @@ footer {
 .listcartproducts  img {
     border-radius: 5px;
     border: solid rgb(0, 0, 0);
-    object-fit: cover;   
 }
 .errorpage {
     text-align: center;

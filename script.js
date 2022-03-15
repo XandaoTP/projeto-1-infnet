@@ -83,16 +83,24 @@ const deleteOfCart = id => {
   }
 }
 const updateItemQty = (id, newQty) => {
+  const newOrderQty = parseInt(newQty)
+  if (isNaN(newOrderQty)) {
+    return
+  }
+  if (newOrderQty > 0) {
   const productListIndex = productsCart.findIndex((product) => {
     if(product.id === id) {
       return true
     }
       return false
   })
-  productsCart[productListIndex].qty = parseInt(newQty)
-  handleCartUpdate()
+  productsCart[productListIndex].qty = newOrderQty
+  handleCartUpdate(false)
+  }else {
+    deleteOfCart(id)
+  } 
 }
-const handleCartUpdate = () => {
+const handleCartUpdate = (renderItens = true) => {
   const noProdcutsEL = document.querySelector('#noproducts')
   const cartWithProductsEl = document.querySelector('#cartwithproducts')
   const listItemEL = cartWithProductsEl.querySelector('ul')
@@ -111,38 +119,43 @@ const handleCartUpdate = () => {
     const cartWithProductsEl = document.querySelector('#cartwithproducts')
     cartWithProductsEl.classList.add('cartwithproductsshow')
     noProdcutsEL.classList.remove('noproductsshow')
-    listItemEL.innerHTML = ''
-    productsCart.forEach((product) => {
-      const showItemEl = document.createElement('li')
-      showItemEl.classList.add('listcartproducts')
-      showItemEl.innerHTML = `<img src="${product.image}" alt="${product.name}" height="85">
-      <div>
-          <p class="nameproductcart">${product.name}</p>
-          <p class="priceincart">R$ ${product.price.toLocaleString('pt-br', { minimumFractionDigits: 2 })}</p>
-       </div>   
-      <input class="inputcart" type="number" value=${product.qty} />
-      <button id="deleteproduct">
-          <i class="fa-solid fa-trash-can"></i>
-      </button>`
-      const buttonDeleteEL = showItemEl.querySelector('button')
-      buttonDeleteEL.addEventListener('click', (event) => {
-        deleteOfCart(product.id)
-      })
-      const inputQtyEl = showItemEl.querySelector('input')
-      inputQtyEl.addEventListener('keyup', (event) => {
-        updateItemQty(product.id, event.target.value)
-      })
-      inputQtyEl.addEventListener('change', (event) => {
-        updateItemQty(product.id, event.target.value)
-      })
-      listItemEL.appendChild(showItemEl)
+    if (renderItens) {
+      listItemEL.innerHTML = ''
+      productsCart.forEach((product) => {
+        const showItemEl = document.createElement('li')
+        showItemEl.classList.add('listcartproducts')
+        showItemEl.innerHTML = `<img src="${product.image}" alt="${product.name}"  width="90" height="90">
+        <div>
+            <p class="nameproductcart">${product.name}</p>
+            <p class="priceincart">R$ ${product.price.toLocaleString('pt-br', { minimumFractionDigits: 2 })}</p>
+        </div>   
+        <input class="inputcart" type="number" value=${product.qty} />
+        <button id="deleteproduct">
+            <i class="fa-solid fa-trash-can"></i>
+        </button>`
+        const buttonDeleteEL = showItemEl.querySelector('button')
+        buttonDeleteEL.addEventListener('click', (event) => {
+          deleteOfCart(product.id)
+        })
+        const inputQtyEl = showItemEl.querySelector('input')
+        inputQtyEl.addEventListener('keyup', (event) => {
+          updateItemQty(product.id, event.target.value)
+        })
+        inputQtyEl.addEventListener('change', (event) => {
+          updateItemQty(product.id, event.target.value)
+        })
+        inputQtyEl.addEventListener('keydown', (event) => {
+          if (event.key === '-' || event.key === '.' || event.key === ',') {
+            event.preventDefault()
+          }
+        })
+        listItemEL.appendChild(showItemEl)      
     })
+  }
   } else {
     cartBadgeEl.classList.remove('buttonunitsshow')
     cartWithProductsEl.classList.remove('cartwithproductsshow')
     noProdcutsEL.classList.add('noproductsshow')
-    
-  
   }
 }
 handleCartUpdate()
