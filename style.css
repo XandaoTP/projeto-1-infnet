@@ -83,10 +83,7 @@ h2 {
 }
 .gridproducts {
     display: grid;
-    align-items: center;
     grid-template-columns: 1fr 1fr;
-    /* margin-left: auto;
-    margin-right: auto; */
     gap: 12px ;
     margin-bottom: 12px;
     grid-auto-rows: 2fr;
@@ -119,6 +116,7 @@ h2 {
     border-radius: 5px;
     box-shadow: 0px 3px 5px rgb(152, 116, 170);
     transition: all 0.3s linear;
+    margin-top: auto;
 }
 .finishsale {
     width: 100%;
@@ -132,6 +130,7 @@ h2 {
     border-radius: 5px;
     box-shadow: 0px 3px 5px rgb(114, 111, 116);
     transition: all 0.3s linear;
+    text-decoration: none;
 }
 .btnaddcart:hover{
     background-color: rgb(16, 0, 43);
@@ -287,6 +286,14 @@ footer {
     align-self: center;
     flex-grow: 1;   
 }
+#productdescription {
+    position: fixed;
+    height: 500px;
+    width: 500px;
+    background-color: rgb(152, 116, 170);
+    display: block; 
+    top: 72px;
+}
 @media (min-width: 576px) {
     .spacing {
         width: 540px;
@@ -371,5 +378,50 @@ footer {
     width: 50px;
     text-align: center;
     align-self: center;
-    justify-items: end;
+    margin-right: 8px;
   }
+  .fa-arrow-left-long {
+      font-size: 30px;
+      color: #fff;
+      align-self: center;
+  }
+  .rodape {
+      display: flex;
+      align-items: center;
+  }  
+    .logo {
+       display: flex;
+        align-items: center;
+        gap: 12px
+    }
+.allinput {
+    border: 1px solid #000000;
+    border-radius: 4px;
+    height: 38px;
+    font-family: inherit;
+    font-size: 16px;
+    width: 100%;
+}
+.allinput::placeholder,
+.allinput:-ms-input-placeholder,
+.allinput::-ms-input-placeholder {
+    color: #180d5a
+}
+.finalorder {
+    padding: 0 12px;
+}
+.finalorder div label {
+    display: block;
+}
+.formaddress {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+.formcheck {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.formcheck input {
+    padding: 12px;
+}

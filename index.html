@@ -1,5 +1,5 @@
     <!DOCTYPE html>
-    <html lang="pt-br">
+    <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,8 +12,10 @@
     <body>
         <header class="topbar">
             <div class="spacing">
-                <img src="images/Sem título.png" id="botao" class="acess">
-                <i class="fa-solid fa-microchip" style="font-size: 35px;"></i>
+                <div class="logo">
+                    <i class="fa-solid fa-microchip" style="font-size: 35px;"></i>
+                    <span>XD Hardware</span>
+                </div>
                 <button id="buttoncart">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span class="buttonunits"></span>
@@ -31,11 +33,9 @@
         <div id=prodcontents>
         </div>
         </main>
-        <footer class="rodape">
-            <div>contato</div>
-                <i class="fa-solid fa-microchip" style="font-size: 35px;"></i>
-                <div>
-                <div> sobre nós</div>
+        <footer>
+            <div class="rodape">    
+            <i class="fa-solid fa-microchip" style="font-size: 35px;"></i>
             </div>
         </footer>
         <aside class="cartwindow">
@@ -49,26 +49,20 @@
               <div id="cartwithproducts">
                 <p class="title">Seus itens do carrinho:</p>
                 <ul>
-                    <!-- <li class="listcartproducts">
-                        <img src="images/1050ti.jpg" width="85" height="85">
-                        <div>
-                            <p class="nameproductcart">GTX 1050 Ti</p>
-                            <p class="priceincart">R$ 1399,00</p>
-                         </div>   
-                        <input class="inputcart" />
-                        <button id="deleteproduct">
-                            <i class="fa-solid fa-trash-can"></i>
-                        </button>
-                    </li> -->
                 </ul>
                     <div class="totalprice">
                         <p class="nameproductcart">TOTAL</p>
                         <p class="priceincart"></p>
                     </div>
-                    <button class="btnaddcart">Quero mais produdos</button>
+                    <!-- <button class="btnaddcart">Quero mais produdos</button> -->
+                    <a href="/finalizar-pedido.html">
                     <button class="finishsale">Finalizar compra</button> 
+                    </a>
               </div>
         </aside>
+        <!-- <aside id="productdescription">
+            <p>Sobre o produto:</p>
+        </aside>  -->
         <script src="script.js"></script>
     </body>
     </html>

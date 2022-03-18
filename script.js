@@ -4,17 +4,23 @@ function openWindowCart (event) {
     CartwindowEl.classList.add("cartwindowopen")
 }
 function closeWindowCart () {
+  if (CartwindowEl){
     CartwindowEl.classList.remove('cartwindowopen')
-}
+}}
 const btnCartEl = document.getElementById('buttoncart')
+if (btnCartEl) {
     btnCartEl.addEventListener('click', openWindowCart)
+}
 const closeCartEl = document.getElementById('btnclosecart')
+if (closeCartEl) {
     closeCartEl.addEventListener('click', closeWindowCart )
+}
     document.addEventListener('click', closeWindowCart)
+    if (CartwindowEl) {
     CartwindowEl.addEventListener('click', (event) => {
       event.stopPropagation()
-    })
-    
+    })}
+    const groupsproducts = document.querySelector('#prodcontents')    
 const loadProducts= () => {
     const groupsproducts = document.querySelector('#prodcontents')
     fetch('/listproducts.json')
@@ -46,20 +52,29 @@ const loadProducts= () => {
             <div class="productcontent">
               <h3>${product.name}</h3>
               <p class="price">R$ ${product.price.toLocaleString('pt-br', { minimumFractionDigits: 2 })}</p>
-              ${product.description ? `<p>${product.description}</p>` : ''}
+              <button id="btnDescription">Sobre o produto</button>
               <button class="btnaddcart">Adicionar ao carrinho</button>
             </div>
           `
-          const btnAddCartEl = cardWrapEl.querySelector('button')
+          const btnAddCartEl = cardWrapEl.querySelector('.btnaddcart')
           btnAddCartEl.addEventListener('click', () => {
             addToCart(product)
           })
+//           const btnAddDescription = cardWrapEl.querySelector('#btnDescription')
+//           btnAddDescription.addEventListener('click', () => {
+//           const btnDescriptionEl = document.querySelector('#btnDescription')
+//           const descriptionProd = document.querySelector('#productdescription')
+//           const descriptionAba = document.createElement('div')
+//           descriptionProd.appendChild(descriptionAba)
+//           descriptionAba.innerHTML = `<p>asa</p><img src="${product.image}" alt="${product.name}" width="250" height="250" />`
+// })
           productsGridEl.appendChild(cardWrapEl)
         })
         return sectionEl
       }
+      if (groupsproducts){
 loadProducts()
-
+      }
 let productsCart = []
 const SavedProductsOrder = localStorage.getItem('productsorder')
 if (SavedProductsOrder) {
@@ -109,29 +124,35 @@ const updateItemQty = (id, newQty) => {
     deleteOfCart(id)
   } 
 }
-const handleCartUpdate = (renderItens = true) => {
+  const handleCartUpdate = (renderItens = true) => {
   const productsCartString = JSON.stringify(productsCart)
   localStorage.setItem('productsorder', productsCartString)
   const noProdcutsEL = document.querySelector('#noproducts')
   const cartWithProductsEl = document.querySelector('#cartwithproducts')
-  const listItemEL = cartWithProductsEl.querySelector('ul')
-  const cartBadgeEl = document.querySelector('.buttonunits')
+  const listItemEL = cartWithProductsEl?.querySelector('ul')
+  const cartBadgeEl = document?.querySelector('.buttonunits')
   if (productsCart.length > 0) {
-    cartBadgeEl.classList.add('buttonunitsshow')
+    cartBadgeEl?.classList.add('buttonunitsshow')
     let total = 0
     let finalPrice = 0
     productsCart.forEach(product => {
       total = total + product.qty
       finalPrice = finalPrice + product.price * product.qty
     })
+    if (cartBadgeEl) {
     cartBadgeEl.textContent = total
+    }
     const finalPriceEl = document.querySelector('.totalprice p:last-child')
+    if (finalPriceEl) {
     finalPriceEl.textContent = finalPrice.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+    }
     const cartWithProductsEl = document.querySelector('#cartwithproducts')
-    cartWithProductsEl.classList.add('cartwithproductsshow')
-    noProdcutsEL.classList.remove('noproductsshow')
+    cartWithProductsEl?.classList.add('cartwithproductsshow')
+    noProdcutsEL?.classList.remove('noproductsshow')
     if (renderItens) {
+      if (listItemEL) {
       listItemEL.innerHTML = ''
+      }
       productsCart.forEach((product) => {
         const showItemEl = document.createElement('li')
         showItemEl.classList.add('listcartproducts')
@@ -160,19 +181,56 @@ const handleCartUpdate = (renderItens = true) => {
             event.preventDefault()
           }
         })
-        listItemEL.appendChild(showItemEl)      
+        listItemEL?.appendChild(showItemEl)      
     })
   }
   } else {
-    cartBadgeEl.classList.remove('buttonunitsshow')
-    cartWithProductsEl.classList.remove('cartwithproductsshow')
-    noProdcutsEL.classList.add('noproductsshow')
+    cartBadgeEl?.classList.remove('buttonunitsshow')
+    cartWithProductsEl?.classList.remove('cartwithproductsshow')
+    noProdcutsEL?.classList.add('noproductsshow')
   }
 }
-handleCartUpdate()
+handleCartUpdate()  
 window.addEventListener('storage', (attpage) =>{
   if (attpage.key === 'productsorder') {
     productsCart = JSON.parse(attpage.newValue)
     handleCartUpdate()
   }
 })
+const formCheckEL = document.querySelector('.formcheck')
+formCheckEL?.addEventListener('submit',(event) => {
+  event.preventDefault()
+  if (productsCart.length == 0) {
+    alert('Seu carrinho está vazio')
+    return
+  }
+    let text = 'Solicito forma de pagamento do pedido abaixo\n------------------------\n\n '
+    let total = 0
+    productsCart.forEach(product => {
+    text += `*${product.qty}x ${product.name}* - ${product.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}\n`
+    total += product.price * product.qty
+    })
+    text += '\n*Frete grátis\n'
+    text += `*Total: ${total.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}*`
+    text += '\n---------------------------------------\n\n'
+    text += `*${formCheckEL.elements['inputname'].value}*\n`
+    text += `${formCheckEL.elements['inputphone'].value}\n\n`
+    text += `${formCheckEL.elements['inputaddress'].value}, ${formCheckEL.elements['inputnumber'].value}`
+    const complement = formCheckEL.elements['inputcomplement'].value
+    if (complement) {
+      text += ` - ${complement} `
+    }
+    text += `\n${formCheckEL.elements['inputneig'].value}, ${formCheckEL.elements['inputcity'].value}\n`
+  text += formCheckEL.elements['inputzipcode'].value
+  const domain = window.innerWidth > 768 ? 'web' : 'api'
+  window.open(`https://${domain}.whatsapp.com/send?phone=5534998700924&text=${encodeURI(text)}`)
+})
+if (typeof IMask !== 'undefined') {
+  const inputPhoneEl = document.querySelector('#inputphone')
+  IMask(inputPhoneEl, {
+    mask: '(00) 00000-0000'
+  })}
+  const inputCepEl = document.querySelector('#inputzipcode')
+  IMask(inputCepEl, {
+    mask: '00000-000'
+  })
