@@ -8,56 +8,56 @@
                 "id": 2,
                 "name": "Asus Strix 3080Ti",
                 "image": "images/3080branca.jpg",
-                "description": "12GB vram",
+                "description": "Placa de Vídeo Asus ROG STRIX RTX 3080 Ti O12G Gaming LHR, 19Gbps, 12GB GDDR6X, Ray Tracing, DLSS",
                 "price": 9999.99
             },
             {
                 "id": 3,
                 "name": "AMD Ryzen 5 5600x",
                 "image": "images/5600x.jpg",
-                "description": "6/12",
+                "description": "Processador AMD Ryzen 5 5600X, Cache 35MB, 3.7GHz (4.6GHz Max Turbo), AM4, Sem Vídeo",
                 "price": 1699.90
             },
             {
                 "id": 4,
                 "name": "Gainward 3060 Ghost",
                 "image": "images/3060gainward.jpg",
-                "description": "12GB vram",
+                "description": "Placa de vídeo Nvidia Gainward Ghost GeForce RTX 3060 NE63060T19K9-190AU OC Edition 12GB",
                 "price": 3600.00
             },
             {
                 "id": 5,
                 "name": "Intel Core i9 10850k",
                 "image": "images/i9-10850k.jpg",
-                "description": "10/20",
+                "description": "Processador Intel Core i9-10850K, Cache 20MB, 3.6GHz (5.2GHz Turbo Max), LGA1200",
                 "price": 2899.99
             },
             {
                 "id": 6,
                 "name": "Asus Rog LC RX6900xt",
                 "image": "images/placa-de-video-asus-rog-strix-lc-rx6900xt.jpg",
-                "description": "16GB vram",
+                "description": "Placa de Vídeo Asus ROG STRIX LC RX6900XT T16G Gaming, 16 Gbps, 16GB GDDR6, RGB, RDNA 2 Architecture ",
                 "price": 10000.00
             },
             {
                 "id": 7,
                 "name": "intel core i7 11700k",
                 "image": "images/processador-intel-core-i7-11700k-11.jpg",
-                "description": "8/16",
+                "description": "PROCESSADOR INTEL CORE I7-11700K, 8-CORE, 16-THREADS, 3.6GHZ (5.0GHZ TURBO), CACHE 16MB, LGA1200",
                 "price": 2789.00
             },
             {
                 "id": 8,
                 "name": "NVIDIA GTX 1050 Ti",
                 "image": "images/1050ti.jpg",
-                "description": "4GB",
+                "description": "Placa de Vídeo NVIDIA Geforce GTX 1050 TI, 4GB, GDDR5",
                 "price": 1349.89
             },
             {
                 "id": 9,
                 "name": "Processador AMD A6-748",
                 "image": "images/AMD-A6-7480.jpg",
-                "description": "Dual core",
+                "description": "Processador AMD A6-7480 Dual Core, Cache 1MB, 3.8Ghz, FM2+",
                 "price": 303.97
             }
         ]
@@ -70,56 +70,56 @@
                  "id": 11,
                  "name": "Intel Core i5 10400",
                  "image": "images/images-processadores/intel10400.jpg",
-                 "description": "6/12",
+                 "description": "Processador Intel Core i5-10400, Cache 12MB, 2.9GHz (4.3GHz Max Turbo), 6/12, LGA 1200",
                  "price": 1199.00
              },
              {
                  "id": 12,
                  "name": "intel Core i5 11400",
                  "image": "images/images-processadores/intel11400.jpg",
-                 "description": "6/12",
+                 "description": "PROCESSADOR INTEL CORE I5-10400, 6-CORE, 12-THREADS, 2.9GHZ (4.3GHZ TURBO), CACHE 12MB, LGA1200",
                  "price": 1399.00
              },
              {
                  "id": 13,
                  "name": "intel Core i5 12400",
                  "image": "images/images-processadores/intel12400.jpg",
-                 "description": "6/12",
+                 "description": "Processador Intel Core i5-12400, Cache 18MB, 2.5GHz (4.4GHz Max Turbo), LGA 1700 ",
                  "price": 1499.00
              },
              {
                  "id": 14,
                  "name": "Intel Core i9 12900k",
                  "image": "images/images-processadores/intel12900k.jpg",
-                 "description": "10/20",
+                 "description": "PROCESSADOR INTEL CORE I9-12900K, 16-CORE, 24-THREADS, 3.2GHZ (5.2GHZ TURBO), CACHE 30MB, LGA1700",
                  "price": 4520.00
              },
              {
                  "id": 15,
                  "name": "Amd Ryzen 7 3700x",
                  "image": "images/images-processadores/ryzen3700x.jpg",
-                 "description": "8/16",
+                 "description": "Processador AMD Ryzen 7 3700X 3.6Ghz (Máx. 4.4GHz) DDR4 AM4 32MB Cache",
                  "price": 2859.00
              },
              {
                  "id": 16,
                  "name": "Amd Ryzen 7 5700g",
                  "image": "images/images-processadores/ryzen5700g.jpg",
-                 "description": "8/16",
+                 "description": "PROCESSADOR AMD RYZEN 7 5700G, 8-CORE, 16-THREADS, 3.8GHZ (4.6GHZ TURBO), CACHE 20MB, AM4",
                  "price": 2068.00
              },
              {
                  "id": 17,
                  "name": "Amd Ryzen 9 5900x",
                  "image": "images/images-processadores/ryzen5900x.jpg",
-                 "description": "12/24",
+                 "description": "Processador AMD Ryzen 9 5900X, Cache 70MB, 3.7GHz (4.8GHz Max Turbo), AM4",
                  "price": 3237.90
              },
              {
                  "id": 18,
                  "name": "Amd Threadripper 3990x",
                  "image": "images/images-processadores/threadripper3990x.jpg",
-                 "description": "64/128",
+                 "description": "PROCESSADOR AMD RYZEN THREADRIPPER 3990X 64CORES 4.3GHZ 280W STRX4",
                  "price": 24999.00
              }
          ]
@@ -132,56 +132,56 @@
                      "id": 20,
                      "name": "Asus RTX 3050 OC ",
                      "image": "images/images-vga/3050.jpg",
-                     "description": "8GB",
+                     "description": "Placa de Vídeo Asus NVIDIA GeForce RTX 3050 OC, 8GB, GDDR6, Ray Tracing",
                      "price": 3499.90
                  },
                  {
                      "id": 21,
                      "name": "Aorus RTX 3070 Ti",
                      "image": "images/images-vga/3070ti.jpg",
-                     "description": "8GB",
+                     "description": "Placa de Vídeo Gigabyte AORUS NVIDIA GeForce RTX 3070 Ti MASTER 8G LHR, 8GB GDDR6X, RGB Fusion 2.0, Ray Tracing, DLSS",
                      "price": 7599.90
                  },
                  {
                      "id": 22,
                      "name": "Gigabyte RTX 3080",
                      "image": "images/images-vga/3080.jpg",
-                     "description": "10GB vram",
+                     "description": "Placa De Vídeo Gigabyte Nvidia Geforce Rtx 3080 Gaming Oc 10GB GDDR6x Dp/hdmi Gv-n3080gaming Oc",
                      "price": 8999.00
                  },
                  {
                      "id": 23,
                      "name": "Zotac RTX 3090 Trinity",
                      "image": "images/images-vga/3090.jpg",
-                     "description": "24GB",
+                     "description": "Placa de Vídeo Zotac NVIDIA GeForce RTX 3080 TRINITY LHR, 10GB, 19 Gbps, GDDR6X, Ray Tracing, DLSS, RGB",
                      "price": 15699.90
                  },
                  {
                      "id": 24,
                      "name": "Sapphire RX 6600XT",
                      "image": "images/images-vga/6600xt.jpg",
-                     "description": "8GB vram",
+                     "description": "Placa de Vídeo Sapphire PULSE RX6600XT OC, 8GB GDDR6, AMD RDNA 2 Architecture",
                      "price": 3999.00
                  },
                  {
                      "id": 25,
                      "name": "XFX RX 6700xt QICK",
                      "image": "images/images-vga/6700xt.jpg",
-                     "description": "12GB",
+                     "description": "Placa de Vídeo XFX Speedster QICK319 AMD Radeon RX 6700XT Black Gaming, 16Gbps, 12GB GDDR6, AMD RDNA 2 Architecture",
                      "price": 5899.00
                  },
                  {
                      "id": 26,
                      "name": "Asus RX 6900XT TUF",
                      "image": "images/images-vga/6900xt.jpg",
-                     "description": "16GB",
+                     "description": "Placa de Vídeo Asus TUF GAMING, Radeon RX 6900 XT, 16GB, GDDR6, FSR, Ray Tracing",
                      "price": 9799.00
                  },
                  {
                      "id": 27,
                      "name": "AMD 6900XT LC",
                      "image": "images/images-vga/6900xtamd.jpg",
-                     "description": "16GB",
+                     "description": "Placa de Vídeo Sapphire AMD Radeon RX 6900 XT OEM, 18Gbps, 16GB GDDR6, AMD RDNA 2",
                      "price": 9999.00
                  }
              ]

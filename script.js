@@ -1,10 +1,13 @@
 const CartwindowEl = document.querySelector('.cartwindow')
+const missIconCart = document.querySelector('#buttoncart')
 function openWindowCart (event) {
   event.stopPropagation()
     CartwindowEl.classList.add("cartwindowopen")
+    missIconCart.classList.add("missiconcart")
 }
 function closeWindowCart () {
   if (CartwindowEl){
+    missIconCart.classList.remove('missiconcart')
     CartwindowEl.classList.remove('cartwindowopen')
 }}
 const btnCartEl = document.getElementById('buttoncart')
@@ -39,6 +42,7 @@ const loadProducts= () => {
       const getSectionElement = (group) => {
         const sectionEl = document.createElement('section')
         const sectionTitleEl = document.createElement('h2')
+        sectionTitleEl.classList.add('h2')
         sectionTitleEl.textContent = group.name
         sectionEl.appendChild(sectionTitleEl)
         const productsGridEl = document.createElement('div')
@@ -52,7 +56,7 @@ const loadProducts= () => {
             <div class="productcontent">
               <h3>${product.name}</h3>
               <p class="price">R$ ${product.price.toLocaleString('pt-br', { minimumFractionDigits: 2 })}</p>
-              <button id="btnDescription">Sobre o produto</button>
+              ${product.description ? `<p class="descr">${product.description}</p>` : ''}
               <button class="btnaddcart">Adicionar ao carrinho</button>
             </div>
           `
@@ -229,8 +233,20 @@ if (typeof IMask !== 'undefined') {
   const inputPhoneEl = document.querySelector('#inputphone')
   IMask(inputPhoneEl, {
     mask: '(00) 00000-0000'
-  })}
+  })
   const inputCepEl = document.querySelector('#inputzipcode')
   IMask(inputCepEl, {
     mask: '00000-000'
-  })
+  }) 
+}
+// const descriptionFinal = document.querySelector('#listfinal')
+// const descriptionList = document.createElement('li')
+// descriptionList?.classList.add('listf')
+// descriptionFinal.appendChild(descriptionList)
+// if (productsCart) {
+// productsCart.forEach((product => {
+// descriptionList.innerHTML = `${product.name}`
+// }))
+// if (productsCart == 0) {
+//   descriptionList.innerHTML = '<p>sdfsdfsdfsdfdsfsdfsd</p>'
+// }}

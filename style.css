@@ -23,10 +23,15 @@ h2 {
     margin: 15px 0px;
     font-weight: 600;
 }
+.h2 {
+    padding: 30px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
 .title {
     font-size: 22px;
     font-weight: 600;
-    color:#fff;
+    color: var(--colorbtn);
 
 }
 :root {
@@ -73,12 +78,12 @@ h2 {
 }
 .buttonunitsshow {
     display: flex;
-  }
+}
 .img1 {
     padding-top: 5px;
     width: 100%;
     height: 150px;
-    border-radius: 0px 0px 100px 100px;
+    /* border-radius: 0px 0px 100px 100px; */
     box-shadow: 0px 20px 15px  var(--colorbtn);
 }
 .gridproducts {
@@ -86,8 +91,7 @@ h2 {
     grid-template-columns: 1fr 1fr;
     gap: 12px ;
     margin-bottom: 12px;
-    grid-auto-rows: 2fr;
-    --skew: 15deg;    
+    grid-auto-rows: 2fr;  
 }
 
 .banner {
@@ -112,23 +116,21 @@ h2 {
     border-top: solid 2px;
     background-color: var(--colorbtnset);
     color: white;
-    margin: 0 auto;
     border-radius: 5px;
     box-shadow: 0px 3px 5px rgb(152, 116, 170);
     transition: all 0.3s linear;
     margin-top: auto;
+    
 }
 .finishsale {
     width: 100%;
     height: 40px;
     border: solid 1px;
     cursor: pointer;
-    border-top: solid 2px;
-    background-color: #fff;
-    color: var(--colorbtn);
+    background-color: var(--colorbtn);
+    color: #fff;
     margin: 0 auto;
-    border-radius: 5px;
-    box-shadow: 0px 3px 5px rgb(114, 111, 116);
+    border-radius: 100px;
     transition: all 0.3s linear;
     text-decoration: none;
 }
@@ -136,21 +138,18 @@ h2 {
     background-color: rgb(16, 0, 43);
 }
 .finishsale:hover{
-    background-color: rgb(177, 176, 179);
+    background-color: rgb(82, 5, 235);
 }
 .productcontent {
     padding: 10px;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
 }
 .productcontent p {
     margin-bottom: 8px;
     text-align: center;
-}
-.productcontent button {
-    margin: auto;
-    display: block;
+    margin: 0;
 }
 .productcontent h3 {
     text-align: center;
@@ -182,7 +181,7 @@ h2 {
 #deleteproduct {
     background-color: transparent;
     font-size: 30px;
-    color: aliceblue;
+    color: var(--colorbtn);
     cursor: pointer;
     margin-bottom: -3px;
     align-self: center;
@@ -190,6 +189,10 @@ h2 {
 .nameproductcart {
     font-size: 16px;
     font-weight: 400;
+}
+.descr {
+    margin: auto;
+    
 }
 footer {
     background-color: black;
@@ -209,7 +212,8 @@ footer {
     width: 100vw;
     height: 100vh;
     top: 0;
-    background-color: rgb(152, 116, 170);
+    background-color: #fff;
+    box-shadow: 8px 8px 8px #573aff;
     display: none;
 }
 .cartwindowopen {
@@ -221,7 +225,8 @@ footer {
     font-size: 30px;
     color: #FFF;
     margin: 10px;
-    align-self: flex-end;
+    cursor: pointer;
+    height:55px;
 }
 #noproducts {
     display: none;
@@ -250,10 +255,10 @@ footer {
 }
 .listcartproducts {
     display: flex;
-    align-items: end;
     padding-top: 15px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 3px solid var(--colorbtn);
     justify-content: space-between;
+    padding-bottom: 12px;
 }
 .listcartproducts  img {
     border-radius: 5px;
@@ -293,6 +298,19 @@ footer {
     background-color: rgb(152, 116, 170);
     display: block; 
     top: 72px;
+}
+.headercart {
+    background-color: var(--colorbtn);
+    display: flex;
+    justify-content: space-between;
+}
+.headercart i { 
+color: #fff;
+align-self: center;
+font-size: 30px;
+}
+.missiconcart{
+    display: none;
 }
 @media (min-width: 576px) {
     .spacing {
@@ -424,4 +442,12 @@ footer {
 }
 .formcheck input {
     padding: 12px;
+}
+.listf {
+    padding-top: 15px;
+    list-style-type: none;
+}
+#listfinal {
+    display: grid;
+    justify-content:center;
 }
