@@ -312,6 +312,15 @@ font-size: 30px;
 .missiconcart{
     display: none;
 }
+.transparentcartpage {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: fixed;
+}
+.transparenton {
+    display: flex;
+}
 @media (min-width: 576px) {
     .spacing {
         width: 540px;
@@ -409,7 +418,7 @@ font-size: 30px;
   }  
     .logo {
        display: flex;
-        align-items: center;
+       align-items: center;
         gap: 12px
     }
 .allinput {

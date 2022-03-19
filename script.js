@@ -1,14 +1,17 @@
 const CartwindowEl = document.querySelector('.cartwindow')
 const missIconCart = document.querySelector('#buttoncart')
+const transparentPage = document.querySelector('.transparentcartpage')
 function openWindowCart (event) {
   event.stopPropagation()
     CartwindowEl.classList.add("cartwindowopen")
     missIconCart.classList.add("missiconcart")
+    transparentPage.classList.add("transparenton")
 }
 function closeWindowCart () {
   if (CartwindowEl){
     missIconCart.classList.remove('missiconcart')
     CartwindowEl.classList.remove('cartwindowopen')
+    transparentPage.classList.remove("transparenton")
 }}
 const btnCartEl = document.getElementById('buttoncart')
 if (btnCartEl) {
