@@ -317,6 +317,8 @@ font-size: 30px;
     height: 100vh;
     display: none;
     position: fixed;
+    background-color: rgb(56, 56, 56);
+    opacity: 0.60;
 }
 .transparenton {
     display: flex;
