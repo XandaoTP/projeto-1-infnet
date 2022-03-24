@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Finalizar pedido</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/05fbb26e2d.js" crossorigin="anonymous"></script>
@@ -21,55 +21,59 @@
             </a>
         </div>     
     </header> 
-    <main class="finalorder">
-        <ul id="listfinal">
-        </ul>
-        <h1>Finalizar pedido</h1>
-        <form class="formcheck">
+    <main id="cartwithproducts" class="finalorderpage">
+        <h1>Confira seu pedido</h1>
+        <ul id="listprod">
+        </ul>   
+        <div class="totalprice">
+            <p class="nameproductcart">TOTAL</p>
+            <p class="priceincart"></p>
+    </main>
+    <h2 class="h2final">Finalizar pedido</h2>
+    <form class="formcheck">
+        <div>
+            <label for="inputname">Nome:</label>
+            <Input type="text" placeholder="Digite seu nome" id="inputname" class="allinput" required></Input>
+        </div>
+        <div>
+            <label for="inputaddress">Endereço:</label>
+            <Input type="text" placeholder="Digite seu endereço" id="inputaddress" class="allinput" required></Input>
+        </div>  
+        <div class="formaddress">
             <div>
-                <label for="inputname">Nome:</label>
-                <Input type="text" placeholder="Digite seu nome" id="inputname" class="allinput" required></Input>
-            </div>
+                <label for="inputnumber">Número:</label>
+                <Input type="number" id="inputnumber" class="allinput" required></Input>
+            </div> 
+             <div>
+                <label for="inputcomplement">Complemento:</label>
+                <Input type="text" placeholder="Complemento" id="inputcomplement" class="allinput" ></Input>
+            </div> 
+        </div>
+        <div class="formaddress">   
             <div>
-                <label for="inputaddress">Endereço:</label>
-                <Input type="text" placeholder="Digite seu endereço" id="inputaddress" class="allinput" required></Input>
-            </div>  
-            <div class="formaddress">
-                <div>
-                    <label for="inputnumber">Número:</label>
-                    <Input type="number" id="inputnumber" class="allinput" required></Input>
-                </div> 
-                <div>
-                    <label for="inputcomplement">Complemento:</label>
-                    <Input type="text" placeholder="Complemento" id="inputcomplement" class="allinput" ></Input>
-                </div> 
-            </div>
-            <div class="formaddress">   
-                <div>
-                    <label for="inputcity">Cidade:</label>
-                    <Input type="text" placeholder="Digite sua cidade" id="inputcity" class="allinput" required></Input>
-                </div> 
-                <div>
-                    <label for="inputzipcode">CEP:</label>
-                    <Input type="text" placeholder="Digite seu CEP" id="inputzipcode" class="allinput" required></Input>
-                </div> 
-            </div>
+                <label for="inputcity">Cidade:</label>
+                <Input type="text" placeholder="Digite sua cidade" id="inputcity" class="allinput" required></Input>
+            </div> 
             <div>
-                <label for="inputneig">Bairro:</label>
-                <Input type="text" placeholder="Digite bairro" id="inputneig" class="allinput" required></Input>
-            </div>  
-            <div>
-                <label for="inputphone">Telefone:</label>
-                <Input type="text" placeholder="Telefone de contato" id="inputphone" class="allinput" required></Input>
-            </div>
-            <input
+                <label for="inputzipcode">CEP:</label>
+                <Input type="text" placeholder="Digite seu CEP" id="inputzipcode" class="allinput" required></Input>
+             </div> 
+        </div>
+        <div>
+            <label for="inputneig">Bairro:</label>
+            <Input type="text" placeholder="Digite bairro" id="inputneig" class="allinput" required></Input>
+        </div>  
+        <div>
+            <label for="inputphone">Telefone:</label>
+            <Input type="text" placeholder="Telefone de contato" id="inputphone" class="allinput" required></Input>
+        </div>
+        <input
             type="submit"
             value="Enviar pedido"
             class="btnaddcart"
             /> 
-        </form>         
-    </main>
+    </form>         
     <script src="https://unpkg.com/imask"></script>
-    <script src="script.js"></script>                  
+    <script src="script.js"></script>                
 </body>
 </html>

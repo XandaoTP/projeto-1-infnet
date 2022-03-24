@@ -110,6 +110,7 @@ const deleteOfCart = id => {
   })
   handleCartUpdate()
   if (productsCart.length === 0) {
+    window.location.replace("/index.html");
     closeWindowCart()
   }
 }
@@ -136,7 +137,7 @@ const updateItemQty = (id, newQty) => {
   localStorage.setItem('productsorder', productsCartString)
   const noProdcutsEL = document.querySelector('#noproducts')
   const cartWithProductsEl = document.querySelector('#cartwithproducts')
-  const listItemEL = cartWithProductsEl?.querySelector('ul')
+  const listItemEL = cartWithProductsEl.querySelector('#listprod')
   const cartBadgeEl = document?.querySelector('.buttonunits')
   if (productsCart.length > 0) {
     cartBadgeEl?.classList.add('buttonunitsshow')
